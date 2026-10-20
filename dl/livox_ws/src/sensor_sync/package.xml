@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>sensor_sync</name>
+  <version>1.0.0</version>
+  <description>
+    STM32 硬件时间同步的下位机 -> ROS 2 桥接：把 STM32 转发的 Epson M-G354PD IMU 帧
+    转成带硬件时间戳的 sensor_msgs/Imu，并提供雷达/IMU 两路时间戳的对齐测量。
+  </description>
+  <maintainer email="haozhiqi@todo.todo">haozhiqi</maintainer>
+  <license>BSD</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>livox_interfaces</exec_depend>
+  <exec_depend>python3-serial</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

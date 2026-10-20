@@ -1,0 +1,90 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Tree Height: 620
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/PointCloud2
+      Name: map
+      Enabled: true
+      Topic:
+        Value: /Laser_map
+        Depth: 2
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+      Style: Points
+      Size (Pixels): 2
+      Size (m): 0.01
+      Color Transformer: FlatColor
+      Color: 80; 255; 120
+      Position Transformer: XYZ
+      Alpha: 1
+      Autocompute Intensity Bounds: true
+      Use rainbow: false
+      Use Fixed Frame: true
+      Selectable: true
+      Decay Time: 600
+    - Class: rviz_default_plugins/PointCloud2
+      Name: cloud_registered
+      Enabled: true
+      Topic:
+        Value: /cloud_registered
+        Depth: 5
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+      Style: Points
+      Size (Pixels): 3
+      Size (m): 0.01
+      Color Transformer: AxisColor
+      Axis: Z
+      Position Transformer: XYZ
+      Alpha: 1
+      Autocompute Intensity Bounds: true
+      Use rainbow: true
+      Use Fixed Frame: true
+      Selectable: true
+      Decay Time: 600
+    - Class: rviz_default_plugins/Path
+      Name: path
+      Enabled: true
+      Topic:
+        Value: /path
+        Depth: 5
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+      Color: 255; 0; 0
+      Line Style: Lines
+      Line Width: 0.05
+      Alpha: 1
+      Buffer Length: 1
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: camera_init
+    Frame Rate: 10
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 15
+      Pitch: 0.6
+      Yaw: 2.4
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Target Frame: <Fixed Frame>
+      Near Clip Distance: 0.01
+Window Geometry:
+  Height: 900
+  Width: 1400

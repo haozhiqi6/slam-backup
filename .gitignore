@@ -1,0 +1,58 @@
+# 思路：根目录默认全部忽略，只放行「工作空间源码 + 根目录的启动脚本」
+# 这样 git add -A 不会把日志、缓存、下载目录一起拖进来
+
+/*
+!/.gitignore
+
+# ---- 只放行 dl/livox_ws/src（逐级放行父目录）----
+!/dl
+/dl/*
+!/dl/livox_ws
+/dl/livox_ws/*
+!/dl/livox_ws/src
+
+# ---- 放行根目录的脚本 / 说明 ----
+!/*.sh
+!/*.py
+!/*.rviz
+!/*.md
+
+# ============ 编译产物（能重新生成，不必存档）============
+build/
+install/
+log/
+devel/
+Log/
+Objects/
+Listings/
+
+# ============ 大文件 / 归档包 / 日志 ============
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.bag
+*.bag.active
+*.db3
+*.mcap
+*.mp4
+*.iso
+*.log
+
+# ============ Python ============
+__pycache__/
+*.pyc
+*.pyo
+
+# ============ 编辑器杂项 ============
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ============ 备份文件 ============
+*.bak
+*.bak2
+*.bak3
+*.orig
