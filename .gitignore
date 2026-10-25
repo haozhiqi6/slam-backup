@@ -6,6 +6,7 @@
 
 # ---- 只放行 dl/livox_ws/src（逐级放行父目录）----
 !/dl
+!/slam2d
 /dl/*
 !/dl/livox_ws
 /dl/livox_ws/*
